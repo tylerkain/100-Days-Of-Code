@@ -12,4 +12,5 @@ if user_input == "1":
         print(" You crossed the sea succesfully and found the treasure")
     elif choice == "2": 
         print(" You Drowned in the rough sea, \n GAME OVER!!!")
-
+elif user_input == "2": 
+    choice_2 = input("You Enter The Jungle and Get By a Mosquito \n You Have Malaria \n GAMER OVER")
