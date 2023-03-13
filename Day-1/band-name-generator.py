@@ -1,4 +1,4 @@
-#!/usr/bin/ env python
+#!/usr/bin/ env python3
 print("Welcome to Band Generator")
 
 def band_name():
