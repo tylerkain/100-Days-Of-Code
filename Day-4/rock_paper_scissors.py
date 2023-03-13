@@ -30,15 +30,18 @@ scissors = '''
 '''
 game = True
 
-game_choices = [rock, paper, scissors]
+game_images= [rock, paper, scissors]
 
 
 while game: 
 
-    user_choice = int(input("[+] Choices \n 0: Rock \n 1: Paper \n 2: Scissors \n User Input: "))
-    computer_choice= game_choices[random.randint(0,2)]
-    player_choice = game_choices[user_choice]
+    user_choice = int(input("What do you choose? Type 0 for Rock, 1 for Paper or 2 for Scissors.\n"))
+    print(game_images[user_choice])
 
+    computer_choice = random.randint(0, 2)
+    print("Computer chose:")
+    print(game_images[computer_choice])
+    
     if user_choice >= 3 or user_choice < 0: 
         print("You typed an invalid number, you lose!")
         game = False
@@ -47,10 +50,10 @@ while game:
     elif computer_choice == 0 and user_choice == 2:
         print("You lose")
         game = False
-    elif computer_choice > user_choice:
+    elif user_choice > computer_choice:
         print("You lose")
         game = False
-    elif user_choice > computer_choice:
+    elif user_choice < computer_choice:
         print("You win!")
     elif computer_choice == user_choice:
         print("It's a draw")
