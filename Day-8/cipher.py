@@ -45,20 +45,17 @@ def decrypt_caesar_cipher(ciphertext, shift_amount):
 
 print(logo)
 while not cipher:
-    direction = input("encode or decode: ")
+    direction = input("encode, decode, or exit: ")
     text = input("Type your message: ").lower()
     shift = int(input("Type the shift number: "))
 
     if direction == 'encode':
         encode_message = caesar_cipher(plaintext=text, shift_amount=shift)
         print(f"encoded message is {encode_message}")
-
     elif direction == 'decode':
         decode_message = decrypt_caesar_cipher(ciphertext=text, shift_amount=shift)
         print(f"decoded message is {decode_message}")
-
-    restart = input("Do you want to end the program: y/n: ")
-
-    if restart == 'y':
-        cipher = True
+    elif direction == 'exit':
+        cipher = False
         print("Exiting")
+
