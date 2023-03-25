@@ -46,9 +46,6 @@ def decrypt_caesar_cipher(ciphertext, shift_amount):
 print(logo)
 while not cipher:
     direction = input("encode, decode, or exit: ")
-    if direction == 'exit':
-        cipher = False
-        print("Exiting")
     text = input("Type your message: ").lower()
     shift = int(input("Type the shift number: "))
 
@@ -58,4 +55,7 @@ while not cipher:
     elif direction == 'decode':
         decode_message = decrypt_caesar_cipher(ciphertext=text, shift_amount=shift)
         print(f"decoded message is {decode_message}")
+    if direction == 'exit':
+        cipher = False
+        print("Exiting")
 
