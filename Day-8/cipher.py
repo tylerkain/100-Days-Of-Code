@@ -1,15 +1,15 @@
 #!/usr/bin/env python3
-from caesar-cipher-art import logo
+from art import logo
 cipher = False
 
 
-def caesar_cipher(plaintext, shift):
+def caesar_cipher(plaintext, shift_amount):
     """Encrypts plaintext using a Caesar cipher with the specified shift value"""
     ciphertext = ""
     for char in plaintext:
         if char.isalpha():
             # Determine the new character code after applying the shift
-            new_code = ord(char) + shift
+            new_code = ord(char) + shift_amount
             if char.isupper():
                 # Handle uppercase letters
                 new_code = (new_code - 65) % 26 + 65
@@ -23,13 +23,13 @@ def caesar_cipher(plaintext, shift):
     return ciphertext
 
 
-def decrypt_caesar_cipher(ciphertext, shift):
+def decrypt_caesar_cipher(ciphertext, shift_amount):
     """Decrypts a message encrypted using a Caesar cipher with the specified shift value"""
     plaintext = ""
     for char in ciphertext:
         if char.isalpha():
             # Determine the original character code before applying the shift
-            original_code = ord(char) - shift
+            original_code = ord(char) - shift_amount
             if char.isupper():
                 # Handle uppercase letters
                 original_code = (original_code - 65) % 26 + 65
@@ -46,18 +46,19 @@ def decrypt_caesar_cipher(ciphertext, shift):
 print(logo)
 while not cipher:
     direction = input("encode or decode: ")
-    text = input("Type your message:\n").lower()
-    shift = int(input("Type the shift number:\n"))
+    text = input("Type your message: ").lower()
+    shift = int(input("Type the shift number: "))
 
     if direction == 'encode':
-        encode_message = caesar_cipher(plaintext=text, shift=shift)
-        print(encode_message)
+        encode_message = caesar_cipher(plaintext=text, shift_amount=shift)
+        print(f"encoded message is {encode_message}")
+
     elif direction == 'decode':
-        decode_message = decrypt_caesar_cipher(ciphertext=text, shift=shift)
-        print(decode_message)
+        decode_message = decrypt_caesar_cipher(ciphertext=text, shift_amount=shift)
+        print(f"decoded message is {decode_message}")
 
     restart = input("Do you want to end the program: y/n: ")
 
     if restart == 'y':
         cipher = True
-
+        print("Exiting")
