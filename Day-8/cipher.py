@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 from art import logo
+
 cipher = False
 
 
@@ -58,4 +59,3 @@ while not cipher:
     if direction == 'exit':
         cipher = False
         print("Exiting")
-

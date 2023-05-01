@@ -1,5 +1,4 @@
-
-grades = {"Harry": 81, "Ron": 78, "Hermione": 99, "Draco": 74, "Neville": 62,}
+grades = {"Harry": 81, "Ron": 78, "Hermione": 99, "Draco": 74, "Neville": 62, }
 
 student_grades = {}
 
@@ -14,4 +13,4 @@ for student in grades:
     else:
         student_grades[student] = ["Fail", score]
 
-print(student_grades["Harry"])
+print(student_grades)

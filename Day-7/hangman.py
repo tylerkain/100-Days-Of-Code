@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Modules"""
 import random
+
 from hangman_art import stages
 from words import word_list
 
@@ -33,6 +34,3 @@ while not game:
         game = True
 
     print(stages[user_lives])
-
-
-

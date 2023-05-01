@@ -22,5 +22,3 @@ def game():
 
 
 game()
-
-

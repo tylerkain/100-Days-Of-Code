@@ -5,12 +5,12 @@ print("[+] Your at a crossroads where do you go: \n [1] The Shores of the Island
 '''Variables'''
 user_input = input("[+] Input 1 or 2: ")
 
-
-if user_input == "1": 
-    choice = input("You have arrived at the Shore of the Island \n [1]: Wait for the boat to the other island \n [2]: Swim to the island \n Choice 1 or 2: ")
-    if choice == "1": 
+if user_input == "1":
+    choice = input(
+        "You have arrived at the Shore of the Island \n [1]: Wait for the boat to the other island \n [2]: Swim to the island \n Choice 1 or 2: ")
+    if choice == "1":
         print(" You crossed the sea succesfully and found the treasure")
-    elif choice == "2": 
+    elif choice == "2":
         print(" You Drowned in the rough sea, \n GAME OVER!!!")
-elif user_input == "2": 
+elif user_input == "2":
     choice_2 = input("You Enter The Jungle and Get By a Mosquito \n You Have Malaria \n GAMER OVER")

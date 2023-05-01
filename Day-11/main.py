@@ -1,6 +1,6 @@
 #!/bin/usr/env python3
-from card_game import play_game
 from art import logo
+from card_game import play_game
 
 print(logo)
 play_game()
