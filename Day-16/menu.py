@@ -1,5 +1,5 @@
 class MenuItem:
-    def __int__(self, name, water, milk, coffee, cost):
+    def __init__(self, name, water, milk, coffee, cost):
         self.name = name
         self.cost = cost
         self.ingredients = {
@@ -10,7 +10,7 @@ class MenuItem:
 
 
 class Menu:
-    def __int__(self):
+    def __init__(self):
         self.menu = [
             MenuItem(name="latte", water=200, milk=150, coffee=24, cost=2.5),
             MenuItem(name="espresso", water=50, milk=0, coffee=18, cost=1.5),
