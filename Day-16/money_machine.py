@@ -36,3 +36,4 @@ class MoneyMachine:
             print("Sorry that's not enough money. Money refunded.")
             self.money_received = 0
             return False
+
